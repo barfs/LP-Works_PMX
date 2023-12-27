@@ -173,7 +173,7 @@ For more details on each option, use the 'help' command `9`.
 
 If the program freezes or glitches in some way to not allow the exit via the input `0`, use ctrl + c to force quit the program.
 
-Output file names are determined by input file names. For example, `file.msg` converted to an Excel file would become a new file titled `file.xlsx`. If there is a file that exists with the same name in the working directory, the option to overwrite or cancel the operation will appear.
+Output file names are determined by input file names. For example, `file.msg` converted to an Excel file would become a new file titled `file.xlsx`. If there is a file that exists with the same name in the working directory, the option to overwrite the file or cancel the operation will appear.
 
 ## 5.) LP-Works
 
