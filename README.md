@@ -92,6 +92,8 @@ pip install xlwt
 
 ## 3.) Running pmx.py
 
+Click on the button on the upper right area that says "<> Code" and click "Download ZIP" to download all of the files as one zipped folder. To download just `pmx.py`, click on the `pmx.py` file above or click [here](https://github.com/barfs/LP-Works_PMX/blob/main/pmx.py), then when looking at the page that displays the code, click on the "Download raw file" button in the upper right.
+
 There are several ways to run the program:
 
 * Right click `pmx.py`, hover over "Open with >", and click "Python" if the option is present.
