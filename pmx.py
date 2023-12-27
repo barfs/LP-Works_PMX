@@ -336,7 +336,6 @@ while True:
               proceed = False
 
             if proceed:
-                # Debugging prints:
                 if debug_mode:
                     for msgs in messages:
                         Message.print(msgs)
@@ -600,10 +599,10 @@ while True:
                                 # Update the DataFrame
                                 plu_file.at[index, msg_headers[i]] = str(data)
 
-                # TODO: test this
-                # For some reason the regular "Merged" column doesn't work without doing this
-                plu_file['Merged'] = plu_file.apply(lambda row: ''.join(str(value) if not pd.isna(value) else '' for value in row['M1':'M8']), axis=1)
+                # In an older version, for some reason the regular "Merged" column doesn't work without doing this
+                #plu_file['Merged'] = plu_file.apply(lambda row: ''.join(str(value) if not pd.isna(value) else '' for value in row['M1':'M8']), axis=1)
 
+                # Enabling Text wrapping for the merged lines
                 #for column in ['R', 'S', 'T']:
                 #    for cell in worksheet[column]:
                 #        cell.alignment = openpyxl.styles.Alignment(wrapText=True)
@@ -890,7 +889,7 @@ while True:
             print(f"Error: Directory '{newdir}' already exists.\n")
         except Exception as e:
             print(f"Error: An unknown error occurred. Exception: {e}\n")
-    elif user_input.lower().startswith("mv ") and len(user_input) > 4:
+    elif user_input.lower().startswith("mv ") and len(user_input) > 5:
         mv_inputs = shlex.split(user_input[3:])
         if len(mv_inputs) == 2:
             old_filename, new_filename = mv_inputs
