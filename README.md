@@ -31,7 +31,7 @@ Installing with Windows requires the manual addition of Python to the Path syste
   * Select "System" to open the System Properties window.
   * In the System Properties window, find and click on the "Advanced system settings," then click the "Environment Variables" button.
 
-There will be two boxes: The upper one is the user variables, the lower is the system variables.
+There will be two sections in the Environment Variables window: The upper one is the user variables, the lower is the system variables.
 
 ![Alternate method image](./img/sas.png "How it appears in Windows 11")
 
@@ -47,8 +47,7 @@ There will be two boxes: The upper one is the user variables, the lower is the s
 
 5. Repeat for the user variables in the upper box
 
-6. Verify Installation
-Open a new Command Prompt window (you may need to close existing ones for changes to take effect) and type:
+6. Verify installation by opening a new Command Prompt window (you may need to close existing ones for changes to take effect) and type:
 
 ```
 python --version
