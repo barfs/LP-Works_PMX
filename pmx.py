@@ -297,6 +297,8 @@ while True:
                     while True:
                         byte = file.read(1)
                         if not byte:
+                            if message.valid_message_id():  # If there's a valid message when EOF is hit
+                                messages.append(message)
                             break  # End of file
                         
                         integer_value = ord(byte)
@@ -422,7 +424,7 @@ while True:
                         print("(This file is already sorted by ID\n)")
                     else:
                         sorted_messages = sorted(messages, key=lambda message: message.id)
-                        print("Exporting to sorted version to", (msg_file_name_without_extension + " sorted.xlsx\n"))
+                        print("Exporting sorted version to", (msg_file_name_without_extension + " sorted.xlsx\n"))
                         export_messages_to_excel(sorted_messages, (msg_file_name_without_extension + " sorted.xlsx") )
                     print("NOTE: To properly display the merged-text results, select the columns and use the \"Wrap Text\" option.")
                     print("      You may need to change the vertical Align settings (use top or middle) as well if using formulas.\n")
