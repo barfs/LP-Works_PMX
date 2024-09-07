@@ -236,7 +236,7 @@ def is_word_in_input(word, text):
     normalized_text = text.lower().replace(" ", "")
     return normalized_word in normalized_text
 
-print("PLU/MSG/Excel Python program started: \n")
+print("PLU/MSG/Excel Python program started.\n")
 
 debug_mode = False
 
@@ -244,8 +244,6 @@ debug_mode = False
 # original_fw_warning_settings = warnings.filterwarnings('default')
 # original_warning_settings = warnings.filters[:]
 
-# Out of while True loop:
-print("PLU/MSG/Excel Python program exited.\n")
 
 # ------------------------------
 
